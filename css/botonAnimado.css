@@ -1,0 +1,46 @@
+.btn-animado {
+    background-color: #ff6600; /* Color de fondo */
+    color: white; /* Color del texto */
+    font-size: 16px;
+    font-weight: bold;
+    padding: 12px 24px;
+    margin-right: -10px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Efecto hover (aumenta ligeramente el tamaño) */
+.btn-animado:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
+}
+
+/* Efecto click (se reduce brevemente el tamaño) */
+.btn-animado:active {
+    transform: scale(0.95);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Efecto de onda al hacer clic */
+.btn-animado::after {
+    content: "";
+    position: absolute;
+    width: 300%;
+    height: 300%;
+    top: 50%;
+    left: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    transition: all 0.4s ease-out;
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+}
+
+.btn-animado:active::after {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0;
+}
