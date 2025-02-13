@@ -9,8 +9,8 @@ include "titulo.php";
     <title>DANA - Tienda</title>
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/botonAnimado.css">
-    
-   
+
+
 </head>
 
 <body>
@@ -22,9 +22,13 @@ include "titulo.php";
                 <a href="/DANA/contacto.php">Contacto</a>
                 <a href="/DANA/login.php">Login</a>
             </div>
-            <div>
-            <button  class="btn-animado" onclick=" window.location.href='registro.php'">Registro</button>
+            <div >
+            <!-- <button  class="btn-animado" onclick=" window.location.href='registro.php'">Login</button> -->
+            
+            <button  class="btn-animado btn-container" onclick=" window.location.href='carrito/index.php'">&#128722;</button>
+            </div> 
+         
 
-            </div>
+
         </nav>
     </header>

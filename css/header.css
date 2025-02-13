@@ -12,7 +12,6 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
 }
 
-
 .navbar-links a {
     color: white; /* Cambia el color del texto */
     text-decoration: none; /* Quita el subrayado */
@@ -23,5 +22,5 @@
 }
 
 .navbar-links a:hover {
-    background-color: rgba(255, 255, 255, 0.2); /* Efecto hover */
+    background-color: #ff6600; /* Efecto hover */
 }

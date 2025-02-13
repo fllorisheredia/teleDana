@@ -1,5 +1,5 @@
 <?php
-// 7. /carrito/index.php (Vista del carrito con productos añadidos)
+// 7. /carrito/index.php (Vista del carrito con productosañadidos)
 session_start();
 if (!isset($_SESSION['carrito'])) {
  $_SESSION['carrito'] = [];

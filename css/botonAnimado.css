@@ -4,7 +4,8 @@
     font-size: 16px;
     font-weight: bold;
     padding: 12px 24px;
-    margin-right: -10px;
+    
+    margin-right: 10px;
     border: none;
     border-radius: 8px;
     cursor: pointer;
@@ -14,11 +15,20 @@
     overflow: hidden;
 }
 
+.btn-container{
+    display: flex;
+    justify-content: start;
+    gap: 15px;
+    
+}
+
 /* Efecto hover (aumenta ligeramente el tamaño) */
 .btn-animado:hover {
     transform: scale(1.05);
     box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
 }
+
+
 
 /* Efecto click (se reduce brevemente el tamaño) */
 .btn-animado:active {
