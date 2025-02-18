@@ -2,9 +2,24 @@
 // Conectar a la base de datos
 include("includes/db.php");
 
+
+
 // Obtener los productos de la base de datos
 $sql = "SELECT * FROM productos ORDER BY id DESC";
 $result = $conexion->query($sql);
+
+// if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+//     $pedido_id = $_POST['nombre'];
+//     $email = $_POST['email'];
+//     $password = $_POST['password'];
+//     $query = $conexion->prepare("INSERT INTO usuarios
+//    (nombre, email, password, rol) VALUES (?, ?, ?,
+//    'cliente')");
+   
+
+
+// }
+
 ?>
 
 <!DOCTYPE html>
@@ -54,7 +69,7 @@ $result = $conexion->query($sql);
 <div class="container mt-5">
     <h1 class="text-center mb-4">Productos Disponibles</h1>
     <div class="text-center mb-4">
-        <a href="productos/agregar.php" class="btn btn-primary">Añadir Producto</a>
+        <a href="productos/agregar2.php" class="btn btn-primary">Añadir Producto</a>
     </div>
 
     <div class="row">
@@ -64,13 +79,15 @@ $result = $conexion->query($sql);
                     <?php if (!empty($row["imagen"])): ?>
                         <img src="imagenes/<?php echo $row['imagen']; ?>" class="product-image" alt="<?php echo $row["nombre"]; ?>">
                     <?php endif; ?>
-                    <h5 class="mt-3"><?php echo $row["nombre"]; ?></h5>
-                    <p class="text-muted"><?php echo $row["descripcion"]; ?></p>
+                    <h5 class="mt-3">Nombre del Producto: <?php echo $row["nombre"]; ?> </h5>
+                    <p class="text-muted">Descripción: <?php echo $row["descripcion"]; ?> :</p>
                     <p><strong>Precio:</strong> <?php echo $row["precio_tonkens"]; ?> Tokens</p>
                     <p><strong>Categoría:</strong> <?php echo $row["categoria"]; ?></p>
                     <p><strong>Stock:</strong> <?php echo $row["stock"]; ?></p>
                     <a href="detalle.php?id=<?php echo $row['id']; ?>" class="btn btn-outline-primary w-100">Ver Detalles</a>
-                    <button class="buy-button mt-2">Comprar</button>
+
+
+                    <button class="buy-button mt-2">Añadir al Carrito</button>
                 </div>
             </div>
         <?php } ?>

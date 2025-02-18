@@ -17,10 +17,10 @@ include "titulo.php";
     <header>
         <nav class="navbar">
             <div class="navbar-links">
-                <a href="/DANA/index.php">Inicio</a>
-                <a href="/quienes_somos.php">Quiénes Somos</a>
-                <a href="/DANA/contacto.php">Contacto</a>
-                <a href="/DANA/login.php">Login</a>
+                <a href="/teleDANA/index.php">Inicio</a>
+                <a href="/teleDANA/quienes_somos.php">Quiénes Somos</a>
+                <a href="/teleDANA/contacto.php">Contacto</a>
+                <a href="/teleDANA/login.php">Login</a>
             </div>
             <div >
             <!-- <button  class="btn-animado" onclick=" window.location.href='registro.php'">Login</button> -->

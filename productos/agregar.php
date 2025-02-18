@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-// Incluir la conexión a la base de datos
+// conexión a la bd
 include __DIR__ . '/../includes/db.php';
 
 $usuario_id = $_SESSION['usuario_id'] ?? 1;
@@ -21,7 +21,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
     
 
-    // Insertar en la base de datos
+    // Insertar bd
     $sql = "INSERT INTO productos (usuario_id, nombre, descripcion, precio_tonkens, categoria, stock) VALUES (?, ?, ?, ?, ?, ?)";
     $stmt = $conexion->prepare($sql);
     $stmt->bind_param("issssi", $usuario_id, $nombre, $descripcion, $precio_tonkens, $categoria, $stock);
@@ -48,7 +48,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <h2>Añadir Producto</h2>
 
-<form action="agregar.php" method="post">
+<form action="agregar.php" method="POST">
     <label for="nombre">Nombre del Producto:</label>
     <input type="text" id="nombre" name="nombre" required>
 
@@ -69,7 +69,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <label for="stock">Stock Disponible:</label>
     <input type="number" id="stock" name="stock" required>
 
-    <button type="submit">Añadir Producto</button>
+    <!-- <button type="submit">Añadir Producto</button> -->
 </form>
 
 </body>

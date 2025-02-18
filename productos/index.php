@@ -17,7 +17,7 @@ $result = $conexion->query($sql);
 <body>
 
 <h2>Productos Disponibles</h2>
-<a href="productos/agregar.php">Añadir Producto</a>
+<a href="teleDANA/index.php">Añadir Producto</a>
 
 
 
